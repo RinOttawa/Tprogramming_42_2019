@@ -4,43 +4,33 @@ namespace CourseApp
 {
     public class Program
     {
-        public static double MyFunction(double a, double b, double x)
+        public static void Сalculation(double x_h, double x_k, double dx)
         {
-            var y = (a * Math.Pow(x, 2)) + (b * x);
-            return y;
-        }
-
-        public static double[] TaskA(double a, double b, double xn, double xk, double dx)
-        {
-            return new double[0];
-        }
-
-        public static double[] TaskB(double a, double b, double[] x)
-        {
-            var y = new double[x.Length];
-            for (var i = 0; i < x.Length; i++)
+            double y;
+            for (double x = x_h; x <= x_k; x = x + dx)
             {
-                y[i] = MyFunction(a, b, x[i]);
+                y = Math.Pow(Math.Pow(Math.Asin(x), 2) + Math.Pow(Math.Cos(x), 4), 3);
+                Console.WriteLine(y + " ");
             }
-
-            return y;
         }
 
-        public static void Main(string[] args)
+        public static void Сalculation2()
         {
-            Console.WriteLine("Hello World!");
-            const double a = 2.2;
-            const double b = 3.8;
-            var resSingle = MyFunction(a, b, 4);
-            Console.WriteLine(resSingle);
-            var x = new double[] { 1, 2, 3, 4, 5 };
-            var taskBRes = TaskB(a, b, x);
-            foreach (var item in taskBRes)
+            double y2;
+            double[] b = { 0.1, 0.35, 0.4, 0.55, 0.6 };
+            for (int i = 0; i < 5; i++)
             {
-                Console.WriteLine($"y = {item}");
+                y2 = Math.Pow(Math.Pow(Math.Asin(b[i]), 2) + Math.Pow(Math.Cos(b[i]), 4), 3);
+                Console.WriteLine(y2 + " ");
             }
+        }
 
-            Console.ReadLine();
+        public static void Main()
+        {
+            Console.WriteLine("Task A:");
+            Сalculation(0.26, 0.66, 0.08);
+            Console.WriteLine("Task B:");
+            Сalculation2();
         }
     }
 }
