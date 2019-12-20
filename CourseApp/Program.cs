@@ -4,10 +4,10 @@ namespace CourseApp
 {
     public class Program
     {
-        public static void Сalculation(double x_h, double x_k, double dx)
+        public static void Сalculation(double xH, double xK, double dx)
         {
             double y;
-            for (double x = x_h; x <= x_k; x = x + dx)
+            for (double x = xH; x <= xK; x = x + dx)
             {
                 y = Math.Pow(Math.Pow(Math.Asin(x), 2) + Math.Pow(Math.Cos(x), 4), 3);
                 Console.WriteLine(y + " ");
