@@ -12,22 +12,30 @@ namespace CourseApp
             return y;
         }
 
-        public static void Сalculation(double xH, double xK, double dx)
+        public static List<double> Сalculation(double xH, double xK, double dx)
         {
             int i = 0;
+            List<double> output = new List<double>();
             for (double x = xH; x <= xK; x = x + dx)
             {
-                Console.WriteLine("{0} ", Mathhh(x));
+                output.Add(Mathhh(x));
+                Console.WriteLine(Mathhh(x));
                 i++;
             }
+
+            return output;
         }
 
-        public static void Сalculation2(List<double> b)
+        public static List<double> Сalculation2(List<double> b)
         {
+            List<double> output = new List<double>();
             foreach (double i in b)
             {
-               Console.WriteLine("{0} ", Mathhh(i));
+               output.Add(Mathhh(i));
+               Console.WriteLine(Mathhh(i));
             }
+
+            return output;
         }
 
         public static void Main()
