@@ -14,13 +14,10 @@ namespace CourseApp
 
         public static List<double> Сalculation(double xH, double xK, double dx)
         {
-            int i = 0;
             List<double> output = new List<double>();
             for (double x = xH; x <= xK; x = x + dx)
             {
                 output.Add(Mathhh(x));
-                Console.WriteLine(Mathhh(x));
-                i++;
             }
 
             return output;
@@ -32,7 +29,6 @@ namespace CourseApp
             foreach (double i in b)
             {
                output.Add(Mathhh(i));
-               Console.WriteLine(Mathhh(i));
             }
 
             return output;
